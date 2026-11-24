@@ -29,3 +29,13 @@
   .about-art .about-stamp {padding:10px 13px;}
   .service-visual {aspect-ratio:1.85;}
 }
+
+/* Hero: moldura rosa orgânica sobre a fotografia. */
+.hero-art .art-shape {display:none;}
+.hero-art .art-window {width:96%; aspect-ratio:1.30; border-radius:48% 52% 43% 57% / 48% 39% 61% 52%; isolation:isolate;}
+.hero-art .art-window img {position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:50% 42%; z-index:0;}
+.hero-art .art-window::after {content:""; position:absolute; inset:0; z-index:1; border:solid #e8adab; border-width:clamp(14px,2vw,27px) clamp(9px,1.35vw,19px) clamp(12px,1.65vw,23px) clamp(9px,1.2vw,17px); border-radius:inherit; pointer-events:none;}
+@media(max-width:620px) {
+  .hero-art .art-window {width:96%; aspect-ratio:1.30;}
+  .hero-art .art-window::after {border-width:14px 10px 12px 9px;}
+}
